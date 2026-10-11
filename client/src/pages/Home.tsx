@@ -23,6 +23,7 @@ import { phrases } from "@/data/phrases";
 import { useTheme } from "@/contexts/ThemeContext";
 
 const SESSION_KEY = "minuto-mulher-seen";
+const ASSET_BASE = import.meta.env.BASE_URL;
 
 type SessionState = { current: number; seen: number[] };
 
@@ -234,7 +235,7 @@ export default function Home() {
       <div className="ambient ambient-two" />
       <header className="topbar">
         <a className="brand" href="/" aria-label="Minuto Mulher, página inicial">
-          <span className="brand-mark"><img src="/logo.svg" alt="" /></span>
+          <span className="brand-mark"><img src={`${ASSET_BASE}logo.svg`} alt="" /></span>
           <span className="brand-lockup"><strong>Minuto</strong><em>Mulher</em></span>
         </a>
         <div className="topbar-actions">
